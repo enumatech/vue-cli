@@ -174,6 +174,8 @@ exports.installDeps = async function installDeps (targetDir, command, cliRegistr
   const args = []
   if (command === 'npm') {
     args.push('install', '--loglevel', 'error')
+  } else if (command === 'pnpm') {
+    args.push('install')
   } else if (command === 'yarn') {
     // do nothing
   } else {
@@ -192,6 +194,8 @@ exports.installPackage = async function (targetDir, command, cliRegistry, packag
   const args = []
   if (command === 'npm') {
     args.push('install', '--loglevel', 'error')
+  } else if (command === 'pnpm') {
+    args.push('install')
   } else if (command === 'yarn') {
     args.push('add')
   } else {
@@ -214,6 +218,8 @@ exports.uninstallPackage = async function (targetDir, command, cliRegistry, pack
   const args = []
   if (command === 'npm') {
     args.push('uninstall', '--loglevel', 'error')
+  } else if (command === 'pnpm') {
+    args.push('uninstall')
   } else if (command === 'yarn') {
     args.push('remove')
   } else {
@@ -234,6 +240,8 @@ exports.updatePackage = async function (targetDir, command, cliRegistry, package
   const args = []
   if (command === 'npm') {
     args.push('update', '--loglevel', 'error')
+  } else if (command === 'pnpm') {
+    args.push('update')
   } else if (command === 'yarn') {
     args.push('upgrade')
   } else {

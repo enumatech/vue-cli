@@ -417,6 +417,11 @@ module.exports = class Creator extends EventEmitter {
             name: 'Use NPM',
             value: 'npm',
             short: 'NPM'
+          },
+          {
+            name: 'Use PNPM',
+            value: 'pnpm',
+            short: 'PNPM'
           }
         ]
       })
